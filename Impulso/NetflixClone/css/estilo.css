@@ -1,0 +1,123 @@
+/* CSS - folha de estilo em cascata */
+/* declarando variável no CSS*/
+:root{
+	--vermelho: #E50914;
+	--preto: #141414;
+}
+
+/* o * se refere a todo o documento que está sendo renderizado aqui dentro (é o reset do CSS)*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/**************** Header ****************/
+body{
+	background: var(--preto);
+	/* 'FONTE PRINCIPAL', caso não ache FONTE1 pode suprir, caso não encontre FONTE2 pode servir */
+	font-family: Arial, Times, serif;
+	color: white;
+}
+
+
+/* para se referir a uma tag HTML apenas escreva seu nome (ex:header), para se referir a uma classe criada por você utilize .NomeClasse */
+header .container{
+	display: flex; /* joga tudo para row */
+	flex-direction: row; /* define a direção do display:flex */
+	align-items: center; /* alinha de maneira vertical // eixo y */
+	justify-content: space-between;
+}
+
+header .logo{
+	margin-left: 5px;
+	color: var(--vermelho);
+	font-family: 'Arial Black', Times;
+	font-size: 40px;
+}
+
+header nav a{
+	text-decoration: none;
+	color: #AAA;
+	margin-right: 10px;
+}
+
+header nav a:hover{
+	color: #fff;
+}
+
+/**************** Filme Principal ****************/
+.filme-principal{
+	font-size: 16px;
+	background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url('../img/capa-fundo.jpg');
+	height: 400px;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* centraliza ao meio da coluna */
+	align-items: flex-start;
+}
+
+/* www.themoviedb.org - para pegar informações e imagens de filmes e séries */
+.filme-principal .descricao{
+	margin-bottom: 40px;
+	margin-top: 10px;
+}
+
+.titulo{
+	margin-top: 15%;
+	font-size: 40px;
+	font-family: 'Trebuchet MS', Arial, Sans-serif;
+}
+
+.botao{
+	background-color: rgba(0,0,0,.50);
+	border: none;
+	color: white;
+	width: 200px;
+	padding: 15px 30px; /* cuida do espaçamento interno do elemento em todos os 4 lados(se valor único). Colocando 2 valores o primeiro é para cima e baixo, o segundo para as laterais */
+	margin-right: 15px; /* "desgruda" os elementos */
+	font-size: 12px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+
+.botao:hover{
+	background-color: white;
+	color: black;
+}
+
+/* fontawesome.com - link para ícones*/
+.botao i{
+	margin-right: 8px;
+}
+
+/* WRAPPER = envelopar
+classes wrapper são classes pais que as alterações afetam diretamente seus filhos de primeiro grau */
+
+.container{
+	margin-left: 20px;
+}
+
+.filme-principal .container{
+	width: 70%;
+}
+
+/* https://owlcarousel2.github.io/OwlCarousel2/ */
+.box-filme{
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+
+.carrosel-filmes{
+	margin-top: 5px;
+}
+
+.title{
+	margin-top: 2%;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	font-size: 40px;
+	font-family: 'Trebuchet MS', Arial, Sans-serif;
+}
